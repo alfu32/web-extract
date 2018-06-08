@@ -3,7 +3,7 @@ function $$$(S){
 }
 
 function extract(){
-x={}
+var x={}
 x.static=$$$("input[type='hidden']").reduce( (a,n) => { a[n.name]=n.value; return a;},{})
 x.actions=$$$("input[type='button']").reduce( (a,n) => { a[n.name]=n.onclick; return a;},{})
 x.fields=$$$("input,select,textarea")
@@ -24,6 +24,7 @@ x.fields=$$$("input,select,textarea")
 },{});
 return x;
 }
+
 function insert(){
 
 }
